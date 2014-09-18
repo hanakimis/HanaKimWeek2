@@ -14,6 +14,7 @@
 		809866B219CAB5BE00231469 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 809866B019CAB5BE00231469 /* LaunchScreen.xib */; };
 		809866BE19CAB5BE00231469 /* CarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809866BD19CAB5BE00231469 /* CarouselTests.swift */; };
 		809866C819CABC7900231469 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809866C719CABC7900231469 /* IntroViewController.swift */; };
+		809866CA19CABFEC00231469 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809866C919CABFEC00231469 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		809866BC19CAB5BE00231469 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		809866BD19CAB5BE00231469 /* CarouselTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTests.swift; sourceTree = "<group>"; };
 		809866C719CABC7900231469 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		809866C919CABFEC00231469 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				809866A719CAB5BE00231469 /* AppDelegate.swift */,
 				809866A919CAB5BE00231469 /* ViewController.swift */,
 				809866AB19CAB5BE00231469 /* Main.storyboard */,
+				809866C919CABFEC00231469 /* SignInViewController.swift */,
 				809866C719CABC7900231469 /* IntroViewController.swift */,
 				809866AE19CAB5BE00231469 /* Images.xcassets */,
 				809866B019CAB5BE00231469 /* LaunchScreen.xib */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				809866CA19CABFEC00231469 /* SignInViewController.swift in Sources */,
 				809866C819CABC7900231469 /* IntroViewController.swift in Sources */,
 				809866AA19CAB5BE00231469 /* ViewController.swift in Sources */,
 				809866A819CAB5BE00231469 /* AppDelegate.swift in Sources */,

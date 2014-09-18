@@ -11,11 +11,12 @@ import UIKit
 class IntroViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var introImageBackground: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        scrollView.contentSize = introImageBackground.frame.size
     }
 
     override func didReceiveMemoryWarning() {
