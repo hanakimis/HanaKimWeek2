@@ -29,19 +29,30 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBAction func onTapSignInButton(sender: UIButton) {
+        var signingInAlert = UIAlertView(title: "Signing in...", message: nil, delegate: nil, cancelButtonTitle: nil)
+        
         if (emailTextField.text.isEmpty) {
             var emptyEmailAlert = UIAlertView(title: "Email Required", message: "Please enter your email address", delegate: self, cancelButtonTitle: "OK")
             emptyEmailAlert.show()
         } else if (!isValidEmail(emailTextField.text)) {
             var invalidEmailAlert = UIAlertView(title: "Email Invalid", message: "Please enter a valid email address", delegate: self, cancelButtonTitle: "OK")
             invalidEmailAlert.show()
-        } else if (passwordTextField.text == "password") && (emailTextField.text == "tim@codepath.com") {
-            // delay and segue to next screen
         } else {
-            var invalidLoginAlert = UIAlertView(title: "Sign In Failed", message: "Incorrect email or password", delegate: self, cancelButtonTitle: "OK")
-            invalidLoginAlert.show()
+            
+            signingInAlert.show()
+            
+            delay(2) {
+                signingInAlert.dismissWithClickedButtonIndex(0, animated: true)
+
+                if (self.passwordTextField.text == "password") && (self.emailTextField.text == "tim@codepath.com") {
+                    // segue into next screen
+                } else {
+                    var invalidLoginAlert = UIAlertView(title: "Sign In Failed", message: "Incorrect email or password", delegate: self, cancelButtonTitle: "OK")
+                    invalidLoginAlert.show()
+                }
+                
+            }
         }
-        
         
     }
     func isValidEmail(testStr:String) -> Bool {
@@ -52,6 +63,15 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         return result
     }
 
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
     /*
     // MARK: - Navigation
 
