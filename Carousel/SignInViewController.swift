@@ -34,9 +34,11 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         if (emailTextField.text.isEmpty) {
             var emptyEmailAlert = UIAlertView(title: "Email Required", message: "Please enter your email address", delegate: self, cancelButtonTitle: "OK")
             emptyEmailAlert.show()
+            
         } else if (!isValidEmail(emailTextField.text)) {
             var invalidEmailAlert = UIAlertView(title: "Email Invalid", message: "Please enter a valid email address", delegate: self, cancelButtonTitle: "OK")
             invalidEmailAlert.show()
+            
         } else {
             
             signingInAlert.show()
@@ -45,12 +47,13 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 signingInAlert.dismissWithClickedButtonIndex(0, animated: true)
 
                 if (self.passwordTextField.text == "password") && (self.emailTextField.text == "tim@codepath.com") {
-                    // segue into next screen
+                    self.performSegueWithIdentifier("signInTutorial", sender: self)
+                    
+                    
                 } else {
                     var invalidLoginAlert = UIAlertView(title: "Sign In Failed", message: "Incorrect email or password", delegate: self, cancelButtonTitle: "OK")
                     invalidLoginAlert.show()
                 }
-                
             }
         }
         
