@@ -12,12 +12,14 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var takeCarouselButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.contentSize = CGSize(width: 1280, height: 568)
         scrollView.delegate = self
+        takeCarouselButton.alpha = 0
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +34,12 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         
         // Set the current page, so the dots will update
         pageControl.currentPage = page
+        
+        if (page == 3) {
+            UIView.animateWithDuration(0.3) {
+                self.takeCarouselButton.alpha = 1
+            }
+        }
     }
 
 

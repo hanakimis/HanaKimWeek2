@@ -160,11 +160,18 @@
                                 </subviews>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="D7k-lb-aGF">
-                                <rect key="frame" x="119" y="500" width="110" height="37"/>
+                                <rect key="frame" x="108" y="500" width="110" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" white="0.73645413306451613" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" red="0.0" green="0.65490198135375977" blue="1" alpha="1" colorSpace="deviceRGB"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7K1-ed-yUQ">
+                                <rect key="frame" x="920" y="464" width="375" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="backup_button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -173,6 +180,7 @@
                     <connections>
                         <outlet property="pageControl" destination="D7k-lb-aGF" id="fRt-OK-3Ix"/>
                         <outlet property="scrollView" destination="00c-4B-cjR" id="O33-F0-TpJ"/>
+                        <outlet property="takeCarouselButton" destination="7K1-ed-yUQ" id="jhA-ae-HxB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aax-9v-8m0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -199,6 +207,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backup_button" width="320" height="97"/>
         <image name="intro" width="320" height="1136"/>
         <image name="intro_tile1" width="153" height="152"/>
         <image name="intro_tile2" width="76" height="75"/>
