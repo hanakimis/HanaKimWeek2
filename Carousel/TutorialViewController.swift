@@ -26,17 +26,6 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func scrollViewWillBeginDecelerating(scrollView: UIScrollView!) {
-        var page : Int = Int(round(scrollView.contentOffset.x / 320))
-        
-        // Set the current page, so the dots will update
-        if (page == 3) {
-            pageControl.alpha = 0
-        } else {
-            pageControl.alpha = 1
-        }
-    }
-    
     func scrollViewDidEndDecelerating(scrollView: UIScrollView!) {
         // Get the current page based on the scroll offset
         var page : Int = Int(round(scrollView.contentOffset.x / 320))
@@ -48,7 +37,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
             UIView.animateWithDuration(0.5) {
                 self.pageControl.alpha = 0
                 self.takeSpinButton.alpha = 1
-                //self.view.bringSubviewToFront(self.takeCarouselButton)
+                self.view.bringSubviewToFront(self.takeSpinButton)
             }
         }
     }
