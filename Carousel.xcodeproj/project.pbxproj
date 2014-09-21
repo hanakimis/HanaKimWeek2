@@ -33,7 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8031CF3119CEA1D50025F6C3 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		8031CF3119CEA1D50025F6C3 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateViewController.swift; path = ../CreateViewController.swift; sourceTree = "<group>"; };
 		809866A219CAB5BE00231469 /* Carousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809866A619CAB5BE00231469 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		809866A719CAB5BE00231469 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +73,6 @@
 		8098669919CAB5BE00231469 = {
 			isa = PBXGroup;
 			children = (
-				8031CF3119CEA1D50025F6C3 /* CreateViewController.swift */,
 				809866A419CAB5BE00231469 /* Carousel */,
 				809866BA19CAB5BE00231469 /* CarouselTests */,
 				809866A319CAB5BE00231469 /* Products */,
@@ -93,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				809866A719CAB5BE00231469 /* AppDelegate.swift */,
+				8031CF3119CEA1D50025F6C3 /* CreateViewController.swift */,
 				809866A919CAB5BE00231469 /* ViewController.swift */,
 				809866AB19CAB5BE00231469 /* Main.storyboard */,
 				80AACA7E19CE87B5005BF088 /* ConversationsViewController.swift */,

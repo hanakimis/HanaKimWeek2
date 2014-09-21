@@ -17,7 +17,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         emailTextField.delegate = self
-        emailTextField.becomeFirstResponder()
         
     }
 
@@ -27,6 +26,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     
 
+    @IBAction func onTapBackButton(sender: AnyObject) {
+        navigationController?.popViewControllerAnimated(true)
+    }
     
     @IBAction func onTapSignInButton(sender: UIButton) {
         var signingInAlert = UIAlertView(title: "Signing in...", message: nil, delegate: nil, cancelButtonTitle: nil)
@@ -58,6 +60,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+    
     func isValidEmail(testStr:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
         
