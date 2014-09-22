@@ -24,10 +24,6 @@
                                         <rect key="frame" x="48" y="762" width="76" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro_tile4" id="hST-uh-MEu">
-                                        <rect key="frame" x="204" y="917" width="76" height="76"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro_tile5" id="RO0-Xo-R2d">
                                         <rect key="frame" x="204" y="841" width="76" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -64,6 +60,10 @@
                                             <segue destination="fSt-Kf-6ru" kind="modal" id="abG-QD-EBM"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro_tile4" id="hST-uh-MEu">
+                                        <rect key="frame" x="204" y="917" width="76" height="76"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -75,6 +75,12 @@
                     <connections>
                         <outlet property="introImageBackground" destination="TqF-hg-GLh" id="bLa-1n-lis"/>
                         <outlet property="scrollView" destination="mvt-Wz-jYX" id="8ky-d0-1Xo"/>
+                        <outlet property="tile1View" destination="dU9-0C-9lV" id="GpM-TS-F9T"/>
+                        <outlet property="tile2View" destination="Tjp-eS-ab4" id="R0e-Jq-nMv"/>
+                        <outlet property="tile3View" destination="AR1-Fc-5yV" id="HKx-fo-sXP"/>
+                        <outlet property="tile4View" destination="int-jx-slL" id="1cH-oY-wNR"/>
+                        <outlet property="tile5View" destination="RO0-Xo-R2d" id="hdb-iC-sAY"/>
+                        <outlet property="tile6View" destination="hST-uh-MEu" id="pd4-Wh-Y3p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avn-xB-zdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -215,7 +221,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_form" id="3yp-Rk-3SZ">
-                                <rect key="frame" x="-1" y="158" width="320" height="113"/>
+                                <rect key="frame" x="0.0" y="158" width="320" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" id="abZ-YS-cm8">
@@ -249,10 +255,10 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" id="cuu-jT-Vk8">
-                                <rect key="frame" x="25" y="174" width="279" height="41"/>
+                                <rect key="frame" x="25" y="173" width="279" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
