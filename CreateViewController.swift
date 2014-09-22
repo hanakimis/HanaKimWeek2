@@ -10,7 +10,10 @@ import UIKit
 
 class CreateViewController: UIViewController {
 
+    @IBOutlet weak var checkboxButton: UIButton!
 
+    var isSelected:Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,4 +29,15 @@ class CreateViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    @IBAction func onTapCheckbox(sender: UIButton) {
+        if (isSelected) {
+            isSelected = false
+            sender.selected = false
+        } else {
+            isSelected = true
+            sender.selected = true
+        }
+        
+    }
+    
 }

@@ -9,20 +9,33 @@
 import UIKit
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var loginTextImage: UIImageView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var loginFormImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         emailTextField.delegate = self
-        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func keyboardWillShow(notification: NSNotification!) {
+        UIView.animateWithDuration(1.5) {
+            self.loginFormImage.frame.offset(dx: 0, dy: -100)
+            self.loginTextImage.frame.offset(dx: 0, dy: -100)
+            self.emailTextField.frame.offset(dx: 0, dy: -100)
+            self.passwordTextField.frame.offset(dx:0, dy: -100)
+            self.signInButton.frame.offset(dx: 0, dy:-100)
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification!) {
+        
     }
     
 
@@ -50,8 +63,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
                 if (self.passwordTextField.text == "password") && (self.emailTextField.text == "tim@codepath.com") {
                     self.performSegueWithIdentifier("signInTutorial", sender: self)
-                    
-                    
                 } else {
                     var invalidLoginAlert = UIAlertView(title: "Sign In Failed", message: "Incorrect email or password", delegate: self, cancelButtonTitle: "OK")
                     invalidLoginAlert.show()
@@ -78,14 +89,10 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             dispatch_get_main_queue(), closure)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    */
 
 }
