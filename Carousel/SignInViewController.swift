@@ -19,23 +19,40 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailTextField.delegate = self
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        //emailTextField.delegate = self
+        //NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        //NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     }
     
     func keyboardWillShow(notification: NSNotification!) {
-        UIView.animateWithDuration(1.5) {
-            self.loginFormImage.frame.offset(dx: 0, dy: -100)
-            self.loginTextImage.frame.offset(dx: 0, dy: -100)
-            self.emailTextField.frame.offset(dx: 0, dy: -100)
-            self.passwordTextField.frame.offset(dx:0, dy: -100)
-            self.signInButton.frame.offset(dx: 0, dy:-100)
-        }
+        var userInfo = notification.userInfo!
+        
+        // Get the keyboard height and width from the notification
+        // Size varies depending on OS, language, orientation
+        var kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as NSValue).CGRectValue().size
+        let textOffset = 0 - loginTextImage.frame.height
+        var durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as NSNumber
+        var animationDuration = durationValue.doubleValue
+        var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
+        var animationCurve = curveValue.integerValue
+        
+        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions.fromRaw(UInt(animationCurve << 16))!, animations: {
+            self.loginFormImage.frame.offset(dx: 0, dy: textOffset)
+            self.loginTextImage.frame.offset(dx: 0, dy: textOffset)
+            self.emailTextField.frame.offset(dx: 0, dy: textOffset)
+            self.passwordTextField.frame.offset(dx:0, dy: textOffset)
+            self.signInButton.frame.offset(dx: 0, dy: textOffset)
+            }, completion: nil)
     }
     
     func keyboardWillHide(notification: NSNotification!) {
-        
+        UIView.animateWithDuration(1.5) {
+            self.loginFormImage.frame.offset(dx: 0, dy: 100)
+            self.loginTextImage.frame.offset(dx: 0, dy: 100)
+            self.emailTextField.frame.offset(dx: 0, dy: 100)
+            self.passwordTextField.frame.offset(dx:0, dy: 100)
+            self.signInButton.frame.offset(dx: 0, dy: 100)
+        }
     }
     
 
@@ -92,7 +109,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        println("Memory Warning")
     }
 
 }

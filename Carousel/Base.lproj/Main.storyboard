@@ -211,7 +211,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_text" id="RuK-gu-Hi0">
-                                <rect key="frame" x="0.0" y="75" width="320" height="70"/>
+                                <rect key="frame" x="0.0" y="74" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_form" id="3yp-Rk-3SZ">
@@ -482,7 +482,7 @@
                                         </state>
                                         <connections>
                                             <action selector="onTapButtonSignOut:" destination="WZt-mK-bcD" eventType="touchUpInside" id="aZr-3g-9rk"/>
-                                            <segue destination="dBx-5X-n4l" kind="modal" id="a6e-n2-04S"/>
+                                            <segue destination="gN4-53-pjI" kind="modal" id="zvd-Ha-2DL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -554,7 +554,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="efE-us-pjC"/>
-        <segue reference="a6e-n2-04S"/>
+        <segue reference="yGc-kK-zsB"/>
     </inferredMetricsTieBreakers>
 </document>
