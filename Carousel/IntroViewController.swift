@@ -21,8 +21,8 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var tile6View: UIImageView!
     
     var introTiles: [UIImageView]!
-    var xOffsets : [Float] = [-30, 75, -66, 10, -200, -15]
-    var yOffsets : [Float] = [-355, -240, -415, -408, -480, -500]
+    var xOffsets : [Float] = [-30, 75, -66, 10, -100, 25]
+    var yOffsets : [Float] = [-355, -240, -315, -368, -430, -450]
     var scales : [Float] = [1, 1.65, 1.7, 1.6, 1.65, 1.65]
     var rotations : [Float] = [-10, -10, 10, 10, 10, -10]
     
@@ -33,11 +33,6 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         scrollView.sendSubviewToBack(introImageBackground)
         
         introTiles = [tile1View, tile2View, tile3View, tile4View, tile5View, tile6View]
-        
-        tile3View.alpha = 0
-        tile4View.alpha = 0
-        tile5View.alpha = 0
-        tile6View.alpha = 0
         
         doTheOffset()
     }
@@ -58,7 +53,7 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         
             tx = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: xOffsets[i], r2Max: 0)
             ty = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: yOffsets[i], r2Max: 0)
-            scale = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: scales[i], r2Max: scales[i])
+            scale = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: scales[i], r2Max: 1)
             rotation = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: rotations[i], r2Max: 0)
         
             introTiles[i].transform = CGAffineTransformMakeTranslation(CGFloat(tx), CGFloat(ty))

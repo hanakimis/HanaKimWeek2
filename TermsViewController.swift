@@ -20,9 +20,12 @@ class TermsViewController: UIViewController {
         
     }
 
+    @IBAction func onTapCloseButton(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }

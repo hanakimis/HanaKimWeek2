@@ -68,15 +68,15 @@ class CreateViewController: UIViewController {
         var animationCurve = curveValue.integerValue
         
         UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions.fromRaw(UInt(animationCurve << 16))!, animations: {
-            self.helpTextImage.frame.origin = CGPoint(x: 0, y: 0)
-            self.formBgImage.frame.origin = CGPoint(x: 0, y: 53)
-            self.firstNameTextField.frame.origin = CGPoint(x: 21, y: 70)
-            self.lastNameTextField.frame.origin = CGPoint(x: 21, y: 108)
-            self.emailTextField.frame.origin = CGPoint(x: 21, y: 151)
-            self.passwordTextField.frame.origin = CGPoint(x: 21, y: 199)
-            self.agreeToTermsButton.frame.origin = CGPoint(x: 21, y: 247)
-            self.checkboxButton.frame.origin = CGPoint(x: 21, y: 253)
-            self.createDropboxButton.frame.origin = CGPoint(x: 0, y: 290)
+            self.helpTextImage.frame.origin = CGPoint(x: 0, y: 82)
+            self.formBgImage.frame.origin = CGPoint(x: 0, y: 153)
+            self.firstNameTextField.frame.origin = CGPoint(x: 21, y: 170)
+            self.lastNameTextField.frame.origin = CGPoint(x: 21, y: 208)
+            self.emailTextField.frame.origin = CGPoint(x: 21, y: 251)
+            self.passwordTextField.frame.origin = CGPoint(x: 21, y: 299)
+            self.agreeToTermsButton.frame.origin = CGPoint(x: 21, y: 347)
+            self.checkboxButton.frame.origin = CGPoint(x: 21, y: 353)
+            self.createDropboxButton.frame.origin = CGPoint(x: 0, y: 467)
             }, completion: nil)
     }
 
@@ -92,6 +92,10 @@ class CreateViewController: UIViewController {
             isSelected = true
             sender.selected = true
         }
+    }
+    
+    @IBAction func onPanView(sender: UIPanGestureRecognizer) {
+        view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {
