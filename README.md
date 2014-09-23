@@ -44,7 +44,7 @@ This is Hana Kim's submission for the assignment (Carousel prototype) for Week 2
 * User can log out
 
 #### Walkthrough of Stories
-
+![alt text](https://github.com/hanakimis/HanaKimWeek2/blob/master/HanaKimWeek2.gif "Week 2 gif")
 
 ***
 
