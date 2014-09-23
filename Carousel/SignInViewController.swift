@@ -66,6 +66,10 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     
 
+    @IBAction func onPanGesture(sender: UIPanGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
     @IBAction func onTapBackButton(sender: AnyObject) {
         navigationController?.popViewControllerAnimated(true)
     }
@@ -80,6 +84,10 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         } else if (!isValidEmail(emailTextField.text)) {
             var invalidEmailAlert = UIAlertView(title: "Email Invalid", message: "Please enter a valid email address", delegate: self, cancelButtonTitle: "OK")
             invalidEmailAlert.show()
+            
+        } else if (passwordTextField.text.isEmpty) {
+            var emptyPasswordAlert = UIAlertView(title: "Password Empty Invalid", message: "Please enter a valid password", delegate: self, cancelButtonTitle: "OK")
+            emptyPasswordAlert.show()
             
         } else {
             

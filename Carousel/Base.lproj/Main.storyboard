@@ -304,6 +304,10 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HvW-5L-bht" appends="YES" id="95s-1R-A6J"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="0sn-vr-uio"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -317,6 +321,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6P4-Bu-L0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="HvW-5L-bht">
+                    <connections>
+                        <action selector="onPanGesture:" destination="y3k-39-YJK" id="ngQ-MC-Us6"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1306" y="285"/>
         </scene>
@@ -602,6 +611,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="efE-us-pjC"/>
+        <segue reference="yGc-kK-zsB"/>
     </inferredMetricsTieBreakers>
 </document>
