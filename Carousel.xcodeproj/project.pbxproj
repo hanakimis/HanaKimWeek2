@@ -16,6 +16,7 @@
 		809866BE19CAB5BE00231469 /* CarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809866BD19CAB5BE00231469 /* CarouselTests.swift */; };
 		809866C819CABC7900231469 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809866C719CABC7900231469 /* IntroViewController.swift */; };
 		809866CA19CABFEC00231469 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809866C919CABFEC00231469 /* SignInViewController.swift */; };
+		80A2C1C119D10821006A573D /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2C1C019D10821006A573D /* TermsViewController.swift */; };
 		80A484BF19CC06EB009DA345 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A484BE19CC06EB009DA345 /* TutorialViewController.swift */; };
 		80AACA7D19CE8657005BF088 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AACA7C19CE8657005BF088 /* FeedViewController.swift */; };
 		80AACA7F19CE87B5005BF088 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AACA7E19CE87B5005BF088 /* ConversationsViewController.swift */; };
@@ -46,6 +47,7 @@
 		809866BD19CAB5BE00231469 /* CarouselTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTests.swift; sourceTree = "<group>"; };
 		809866C719CABC7900231469 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		809866C919CABFEC00231469 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		80A2C1C019D10821006A573D /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		80A484BE19CC06EB009DA345 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		80AACA7C19CE8657005BF088 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		80AACA7E19CE87B5005BF088 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		8098669919CAB5BE00231469 = {
 			isa = PBXGroup;
 			children = (
+				80A2C1C019D10821006A573D /* TermsViewController.swift */,
 				809866A419CAB5BE00231469 /* Carousel */,
 				809866BA19CAB5BE00231469 /* CarouselTests */,
 				809866A319CAB5BE00231469 /* Products */,
@@ -237,6 +240,7 @@
 				809866C819CABC7900231469 /* IntroViewController.swift in Sources */,
 				8031CF3219CEA1D50025F6C3 /* CreateViewController.swift in Sources */,
 				80AACA7F19CE87B5005BF088 /* ConversationsViewController.swift in Sources */,
+				80A2C1C119D10821006A573D /* TermsViewController.swift in Sources */,
 				80A484BF19CC06EB009DA345 /* TutorialViewController.swift in Sources */,
 				809866AA19CAB5BE00231469 /* ViewController.swift in Sources */,
 				80AACA7D19CE8657005BF088 /* FeedViewController.swift in Sources */,
